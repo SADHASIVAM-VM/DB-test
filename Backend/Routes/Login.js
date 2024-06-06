@@ -1,6 +1,5 @@
 const exp = require("express")
 const User = require("../models/DbModel")
-const bcrypt = require("bcrypt")
 const router = exp.Router()
 
 router.route("/login").post(async (req, res)=>{
