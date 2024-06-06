@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
    try{
-    await fetch("http://localhost:3000/login",{
+    await fetch("https://db-test-3.onrender.com/login",{
       method:"POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({name:username, email,password})
@@ -31,7 +31,7 @@ function Login() {
   };
 
   const handleUserDatas = async()=>{
-    await fetch("http://localhost:3000/loginUser",{
+    await fetch("https://db-test-3.onrender.com/loginUser",{
       method:"get"
     }).then((res)=> res.json())
     .then((res)=> setAdminDatas(res.showProduct))
